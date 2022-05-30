@@ -22,6 +22,10 @@
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
         
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
       
     
     
@@ -49,7 +53,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
   
     
     
@@ -561,6 +565,8 @@
 </ol>
 <h4 id="_4">实验结果<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>先介绍一下实验过程中的一些参数配置或者是具体的模型配置。</p>
+<div class="admonition summary">
+<p class="admonition-title">两个单模态配置</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">text-encoder</label><label for="__tabbed_1_2">video-encoder</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -578,12 +584,15 @@
 </div>
 </div>
 </div>
+</div>
 <p>采用了8块V100进行训练。训练过程分两个阶段</p>
 <ul>
 <li>第1个阶段，batch size设置为600训练50个epoch大概需要花1.5天，lr=1e-3</li>
 <li>第2个阶段, batch size设置为48，然后要训练50个epoch，大概需要12天，lr=1e-4</li>
 </ul>
 <p>这里面的实验结果，主要针对5个任务分别做了分析，具体如下：</p>
+<div class="admonition summary">
+<p class="admonition-title">5个目标任务</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">基于文本的图像检索</label><label for="__tabbed_2_2">多模态字幕生成</label><label for="__tabbed_2_3">其他</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -596,6 +605,7 @@
 </div>
 <div class="tabbed-block">
 <p>其他几个目标任务的结果就不继续展开了，可以看看原论文中的几个结果table</p>
+</div>
 </div>
 </div>
 </div>
