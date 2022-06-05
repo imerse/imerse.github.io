@@ -1,0 +1,868 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Omnimatte 视频中目标及其effects的关联 - 日拱一卒</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="日拱一卒" class="md-header__button md-logo" aria-label="日拱一卒" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            日拱一卒
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Omnimatte 视频中目标及其effects的关联
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="日拱一卒" class="md-nav__button md-logo" aria-label="日拱一卒" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    日拱一卒
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        写在开始
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Omnimatte 视频中目标及其effects的关联
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Omnimatte 视频中目标及其effects的关联
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、文档更新记录
+  </a>
+  
+    <nav class="md-nav" aria-label="一、文档更新记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 版本信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、算法介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="二、算法介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1. 核心思想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 结论和展望
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 结论和展望">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    不足
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 实验
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 实验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据集介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实验结果
+  </a>
+  
+    <nav class="md-nav" aria-label="实验结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    ⅰ、真实视频上定性的示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    ⅱ、对象擦除
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii" class="md-nav__link">
+    ⅲ、阴影检测的对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv" class="md-nav__link">
+    ⅳ、背景减除的对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    ⅴ、与分层神经渲染的对比
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 详细过程
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 详细过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    loss 定义
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 应用场景
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    三、附件
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UniVL-%E5%A4%9A%E6%A8%A1%E6%80%81%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E5%92%8C%E7%94%9F%E6%88%90/" class="md-nav__link">
+        UniVL 多模态视频理解和生成
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、文档更新记录
+  </a>
+  
+    <nav class="md-nav" aria-label="一、文档更新记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 版本信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、算法介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="二、算法介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1. 核心思想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 结论和展望
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 结论和展望">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    不足
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 实验
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 实验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据集介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实验结果
+  </a>
+  
+    <nav class="md-nav" aria-label="实验结果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    ⅰ、真实视频上定性的示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    ⅱ、对象擦除
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii" class="md-nav__link">
+    ⅲ、阴影检测的对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv" class="md-nav__link">
+    ⅳ、背景减除的对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v" class="md-nav__link">
+    ⅴ、与分层神经渲染的对比
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 详细过程
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 详细过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loss" class="md-nav__link">
+    loss 定义
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 应用场景
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    三、附件
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Omnimatte 视频中目标及其effects的关联</h1>
+
+<h2 id="_1">一、文档更新记录<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 版本信息<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>版本号：v1</li>
+<li>论文名称：Omnimatte: Associating Objects and Their Effects in Video [CVPR 2021 Oral]</li>
+<li>创建日期：2022.06.05</li>
+<li>创建人：扶云</li>
+</ul>
+<h2 id="_2">二、算法介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">1. 核心思想<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p>这篇文章主要的出发点是，考虑到现在大多数的图像分割中并没有考虑目标附带的一些效果，例如阴影、反射、烟雾等等，这篇文章的目的，就是为了解决这样一个问题，希望通过输入一个普通的视频，以及一个或者多个感兴趣的目标对象随时间变化的（粗分割）mask，为每个对象估计一个全像-omnimatte（一个包括该对象及其所有相关的时间变化的场景元素的阿尔法遮罩和彩色图像）。</p>
+<ol>
+<li>在输入视频上以自我监督的方式进行训练，没有任何人工标签。为任意物体和各种效果自动产生全像。</li>
+<li>展示了真实世界视频的结果，其中包含不同类型的主体（汽车、动物、人）和复杂的效果之间的互动，从半透明的元素，如烟雾和反射，到完全不透明的效果，如连接到主体的物体。</li>
+</ol>
+<blockquote>
+<p>看下面这张图就可以看出来，输入是一个原始的图像帧（序列），以及对应目标（人、狗、车等）的粗分割mask，输出则是将目标与其相关的效果（阴影、烟雾、倒影等）自动匹配上之后的mask 和 RGB前景。非常的amazing.</p>
+</blockquote>
+<p><img alt="20220605164514" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605164514.png" /></p>
+<h3 id="2">2. 结论和展望<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="_3">不足<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>作者在前面的方法中，他采用了一个单应性矩阵（homographies）来估计背景的一些微小的变化，但是当这个矩阵不能完全准确地代表背景的时候，就会出现一些错误。</p>
+</blockquote>
+<ol>
+<li>背景的估计不一定完全准确</li>
+<li>无法分离那些在整个视频中相对于背景完全静止的物体或效果。这些问题可以通过建立一个明确地模拟场景三维结构的背景表示来解决（例如[4]）</li>
+<li>作者观察到，网络权重的不同随机初始化可能偶尔会导致不同的，有时是不理想的解决方案。他们推测，通过进一步优化帧被引入模型的顺序，可以获得更可靠的收敛效果</li>
+</ol>
+<h3 id="3">3. 实验<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h4 id="_4">数据集介绍<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>这个论文里面涉及到的实验数据主要是他们从一些视频里面挑出来的视频片段做了效果的测试，然后跟之前算法的效果进行对比，大部分没有量化的评估。其中只是在背景剪除这个实验上，在CDW-2014数据集上做了一个量化的对比，但是这个数据集我没有找到通用的一些实验介绍。</p>
+<h4 id="_5">实验结果<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>作者针对这个算法的应用场景，针对性的做了比较丰富的一些实验。</p>
+<h5 id="i">ⅰ、真实视频上定性的示例<a class="headerlink" href="#i" title="Permanent link">&para;</a></h5>
+<p>图3显示了我们在DAVIS[23]、CDW2014[36]（见第4.4节）和从YouTube下载的各种真实世界的视频上估计的全息图的例子。这些例子跨越了广泛的动态主体（例如，人、动物或一般的移动物体，如足球），执行复杂的动作并产生各种场景效果，包括阴影、反射、水波纹、灰尘和烟雾。输入的物体遮罩都不包括这些效果（见图3（b））。</p>
+<h5 id="ii">ⅱ、对象擦除<a class="headerlink" href="#ii" title="Permanent link">&para;</a></h5>
+<p>我们的方法可以应用于从视频中移除动态物体，方法是：(i)将我们的全息图二值化，并将其作为单独的视频补全方法（如FGVC[11]）的输入，或者(ii)简单地将物体的全息图层从我们的重建中剔除。</p>
+<p>一般，去除一个物体但不去除其相关的效果会产生一个不现实的结果（物体被去除但其阴影仍然存在）。通常情况下，这样的效果是由人工注释的，以创建一个保守的二进制掩码来移除区域（图4（c））。为了证明全能工具可以取代人工编辑，我们通过 <mark>将我们的软阿尔法阈值定为0.25并扩张20个像素来得出一个二进制掩码</mark> ，并将其输入到FGVC[11]。图4&copy;显示马和它的影子都被去掉了，表明我们得出的遮罩与手工注释的遮罩相媲美。</p>
+<p>图5显示了全局去除（上述方法（二））和FGVC使用手工遮罩的比较。在火烈鸟的例子中，我们的方法不仅去掉了火烈鸟，而且还去掉了它在水面下的反射。</p>
+<p>FGVC依靠的是不包括反射的遮罩，因此反射在他们的结果中保持不变。我们的全息图避开了手动标记这种半透明的东西的需要。</p>
+<blockquote>
+<p>这里展示了两种对象擦除的方法，第1种方法是通过将本论文输出的mask图赢分割之后输入到当前SOTA的对象擦除算法（FGVC）中，这里只利用了输出的mask信息，跟原FGVC手动生成的mask效果可比，
+第2种方法是直接采用本论文生成的合成的背景图片当做对象擦除之后的结果，效果也跟之前手动选定mask之后擦除目标的结果可比，甚至更好（水中倒影）。</p>
+</blockquote>
+<p><img alt="20220605170749" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605170749.png" /></p>
+<h5 id="iii">ⅲ、阴影检测的对比<a class="headerlink" href="#iii" title="Permanent link">&para;</a></h5>
+<p>我们展示了与最新的 <mark>阴影检测方法ISD[34]</mark> 的定性比较，ISD是一种基于深度学习的方法，将RGB图像作为输入，并产生物体-阴影对的片段。ISD集成了一个类似MaskRCNN的物体检测阶段（Detectron2[38]），因此它不需要或不允许输入掩码。</p>
+<p>图7比较了我们与ISD在两个具有挑战性的场景中的结果，其中一个人的影子投射到另一个物体（长椅）上，以及一个人的影子被另一个物体（一只狗）遮挡住。我们的方法在这两种情况下都成功地处理并超过了ISD。 <mark>遮挡和投射在其他物体上的影子对于ISD等纯数据驱动的方法来说是特别困难的，因为影子的外观取决于场景中多个物体的相对配置。</mark> </p>
+<blockquote>
+<p>这里挑选了一个影子投射在长椅上的场景进行了对比，体现出本文的算法比直接做阴影检测的效果会更好一些，在遮挡或者投影这样的一些场景上面。</p>
+</blockquote>
+<p><img alt="20220605171753" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605171753.png" /></p>
+<h5 id="iv">ⅳ、背景减除的对比<a class="headerlink" href="#iv" title="Permanent link">&para;</a></h5>
+<p>在CDW-2014这个数据集上定量的评估了在背景减除任务上的效果。采用了 Jaccard index (J ) and Boundary measure (F) 来评估。</p>
+<p><img alt="20220605172324" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605172324.png" /></p>
+<h5 id="v">ⅴ、与分层神经渲染的对比<a class="headerlink" href="#v" title="Permanent link">&para;</a></h5>
+<p>图 10 显示了与 Lu 等人的人类特定的分层神经渲染方法的定性比较。 [18]。
+在 [18] 中，使用表示每个人的几何形状的 <mark>每帧 UV 贴图</mark> 和表示外观的 <mark>每人可训练纹理贴图</mark> 来对人进行参数化。</p>
+<p>相反，我们使用二进制掩码和预先计算的光流来表示对象区域（参见第 3 节）。为了比较，我们使用了从它们的 UV 图中提取的二进制掩码。【直接从uv图生成的mask】</p>
+<p>在这两个例子中，我们的方法都取得了与 [18] 相当的结果，成功地捕获了蹦床变形、阴影和反射，但<code>输入更通用、更简单</code>。在遮挡情况下表现也更好。</p>
+<blockquote>
+<p>这里其实就是拿了一些其他的能对人进行估计的算法来进行对比论证本文算法的一个优势和效果。
+下面这个图里面对蹦床这个场景的效果确实很好，基本上把蹦床的形变也处理了。</p>
+</blockquote>
+<p><img alt="20220605173854" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605173854.png" /></p>
+<h3 id="4">4. 详细过程<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>首先，basemodel是一个<code>2D-Unet</code>。【目前看，前处理的过程比较多】</p>
+<ol>
+<li>将目标分成N个mask layers【分组，例如骑车的人，这里怎么分组的？】</li>
+<li>计算密集光流场<span class="arithmatex"><span class="MathJax_Preview">F_t</span><script type="math/tex">F_t</script></span></li>
+<li>对齐所有的帧到共同的坐标系</li>
+</ol>
+<p>模型infer的信息:</p>
+<ol>
+<li>omnimattes- mattes 和 RGB图像对，包括空间和时间上与之相关的所有场景元素</li>
+<li>每个层的精确光流场【refine之后的】</li>
+<li>背景RGB图像</li>
+</ol>
+<p>下面这个公式就是输入和输出的一些信息定义：</p>
+<p><img alt="20220605180654" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605180654.png" /></p>
+<blockquote>
+<p>参考下面这张图中的整体结构</p>
+</blockquote>
+<p><img alt="20220605174403" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605174403.png" /></p>
+<h4 id="loss">loss 定义<a class="headerlink" href="#loss" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>整个系统里面这个loss的定义比较复杂。</p>
+</blockquote>
+<p>训练损失由RGBA输出（第3.2节）和预测flow（第3.3节）的部分组成。</p>
+<ol>
+<li>主要的损失是重建损失<span class="arithmatex"><span class="MathJax_Preview">E_{rgb-recon}</span><script type="math/tex">E_{rgb-recon}</script></span>，但由于重建对多层的约束不足，</li>
+<li>我们对 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 层增加了一个稀疏性正则化<span class="arithmatex"><span class="MathJax_Preview">E_{reg}</span><script type="math/tex">E_{reg}</script></span>，对掩码增加了一个初始化损失<span class="arithmatex"><span class="MathJax_Preview">E_{mask}</span><script type="math/tex">E_{mask}</script></span>，类似于[18]。</li>
+<li>我们通过增加一个流动重建损失<span class="arithmatex"><span class="MathJax_Preview">E_{flow-recon}</span><script type="math/tex">E_{flow-recon}</script></span>、及对<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> mattes 增加一个时间一致性项 <span class="arithmatex"><span class="MathJax_Preview">E_{alpha-warp}</span><script type="math/tex">E_{alpha-warp}</script></span> 来鼓励结果的运动与输入相匹配。</li>
+</ol>
+<p>整体的loss就如下所示，加权：</p>
+<p><img alt="20220605180829" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605180829.png" /></p>
+<pre class="mermaid"><code>graph LR
+    R(RGBA losses) --&gt; A("E_{rgb-recon}")
+    R(RGBA losses) --&gt; B("E_{reg}")
+    R(RGBA losses) --&gt; C("E_{mask}")
+
+    F(FLOW losses) --&gt; D("E_{flow-recon}")
+    F(FLOW losses) --&gt; E("E_{alpha-warp}")
+</code></pre>
+<p>展开loss：</p>
+<div class="admonition summary">
+<p class="admonition-title">5个目标任务</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="arithmatex"><span class="MathJax_Preview">E_{rgb-recon}</span><script type="math/tex">E_{rgb-recon}</script></span></label><label for="__tabbed_1_2"><span class="arithmatex"><span class="MathJax_Preview">E_{reg}</span><script type="math/tex">E_{reg}</script></span></label><label for="__tabbed_1_3"><span class="arithmatex"><span class="MathJax_Preview">E_{mask}</span><script type="math/tex">E_{mask}</script></span></label><label for="__tabbed_1_4"><span class="arithmatex"><span class="MathJax_Preview">E_{flow-recon}</span><script type="math/tex">E_{flow-recon}</script></span></label><label for="__tabbed_1_5"><span class="arithmatex"><span class="MathJax_Preview">E_{alpha-warp}</span><script type="math/tex">E_{alpha-warp}</script></span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这里主要是重建图像的L1 loss。</p>
+</div>
+<div class="tabbed-block">
+<p>为了防止一个layer就构建出原始帧，这里需要对<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>加正则（近似L0和L1正则的混合loss）。
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cal_alpha_reg</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">lambda_alpha_l1</span><span class="p">,</span> <span class="n">lambda_alpha_l0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate the alpha regularization term.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        prediction (tensor) - - composite of predicted alpha layers</span>
+<span class="sd">        lambda_alpha_l1 (float) - - weight for the L1 regularization term</span>
+<span class="sd">        lambda_alpha_l0 (float) - - weight for the L0 regularization term</span>
+<span class="sd">    Returns the alpha regularization loss term</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#    assert prediction.max() &lt;= 1.</span>
+    <span class="c1">#    assert prediction.min() &gt;= 0.</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="k">if</span> <span class="n">lambda_alpha_l1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">loss</span> <span class="o">+=</span> <span class="n">lambda_alpha_l1</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lambda_alpha_l0</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Pseudo L0 loss using a squished sigmoid curve.</span>
+        <span class="n">l0_prediction</span> <span class="o">=</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">prediction</span> <span class="o">*</span> <span class="mf">5.0</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2.0</span>
+        <span class="n">loss</span> <span class="o">+=</span> <span class="n">lambda_alpha_l0</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">l0_prediction</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">loss</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>这里主要是重建图像的L1 loss。
+是一个边界腐蚀损失，先计算 trimap(这里实际就是输入的mask？) 和预测<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>的L1 loss，然后计算边界差异的loss</p>
+<div class="highlight"><pre><span></span><code><span class="n">mask_err</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">L1Loss</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="n">pos_mask</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+<span class="n">neg_mask</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="o">-</span><span class="n">target</span><span class="p">)</span>
+<span class="n">pos_mask_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos_mask</span> <span class="o">*</span> <span class="n">mask_err</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">pos_mask</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">neg_mask_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">neg_mask</span> <span class="o">*</span> <span class="n">mask_err</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">neg_mask</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="mf">.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">pos_mask_loss</span> <span class="o">+</span> <span class="n">neg_mask_loss</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">loss</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>这个跟上面的RGB重建损失类似，L1 loss</p>
+</div>
+<div class="tabbed-block">
+<p>这里是对 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> wrap做了一个限制，对t+1时刻第i层的<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>采用t时刻预测出来的 flow 进行变换（wrap），得到 <span class="arithmatex"><span class="MathJax_Preview">\alpha_{wt}^i</span><script type="math/tex">\alpha_{wt}^i</script></span>，这里尽量约束两个时刻的<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 具有时间的一致性。【这项loss默认权重很小，0.005】</p>
+<p><img alt="20220605211641" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220605211641.png" /></p>
+</div>
+</div>
+</div>
+</div>
+<blockquote>
+<p>整个流程看下来，太多的工程化在里面了，超参数也非常多。←_←</p>
+</blockquote>
+<p>实现的粗略流程
+<pre class="mermaid"><code>graph LR
+    I(input video) -- get frame --&gt; F(frames) --&gt; M(Mask rcnn)
+    --获取粗分割mask--&gt; Ma(Mask) --计算光流 --&gt; FL(flow)
+    F--&gt;Om(OmniMatte Model)
+    FL--&gt;Om(OmniMatte Model)</code></pre></p>
+<h3 id="5">5. 应用场景<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>可以帮助各种应用，如删除、复制或增强视频中的物体。</p>
+<h2 id="_6">三、附件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><a href="https://arxiv.org/abs/2105.06993">原始论文</a></p>
+<p><a href="https://github.com/microsoft/UniVL">github</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: 写在开始" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              写在开始
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../UniVL-%E5%A4%9A%E6%A8%A1%E6%80%81%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E5%92%8C%E7%94%9F%E6%88%90/" class="md-footer__link md-footer__link--next" aria-label="Next: UniVL 多模态视频理解和生成" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              UniVL 多模态视频理解和生成
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+        <script src="../mathjax-config.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../js/baidutongji.js"></script>
+      
+    
+  </body>
+</html>

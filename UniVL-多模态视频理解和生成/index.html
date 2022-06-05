@@ -39,6 +39,8 @@
       
     
     
+      <link rel="stylesheet" href="../extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -195,6 +197,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Omnimatte-%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9B%AE%E6%A0%87%E5%8F%8A%E5%85%B6effects%E7%9A%84%E5%85%B3%E8%81%94/" class="md-nav__link">
+        Omnimatte 视频中目标及其effects的关联
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -241,13 +258,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 修订历史
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -269,7 +279,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     2. 结论
   </a>
   
@@ -395,13 +405,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 修订历史
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -423,7 +426,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     2. 结论
   </a>
   
@@ -526,17 +529,20 @@
 <li>创建日期：2022.05.29</li>
 <li>创建人：扶云</li>
 </ul>
-<h3 id="2">2. 修订历史<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>时间  版本号 修订人 主要修订内容</p>
 <h2 id="_2">二、算法介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="1_1">1. 核心思想<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<p>这篇文章提出了一个统一的视频和语言预训练模型，可用于多模态的理解和生成任务。它包括了
-- 4个组件，其中包括==两个单模态的编码器，一个交叉编码器，还有一个基于transformer的解码器==。
-- 5个目标，包括视频文本的联合，条件掩码语言模型（CMLM）、条件掩码帧模型（CMFM）以及视频文本的对齐，还有语言的重建。
-- 两阶段的预训练策略，其中第一个是分阶段的预训练StageP，另一个是增强的视频表达EnhancedV。
-- 在视频数据集<code>HowTo100M</code>上进行预训练，同时，也做了一些下游的任务，在5个下游任务上都获得了最佳的结果。</p>
+<p>这篇文章提出了一个统一的视频和语言预训练模型，可用于多模态的理解和生成任务。它包括了</p>
+<ul>
+<li>4个组件，其中包括 <mark>两个单模态的编码器，一个交叉编码器，还有一个基于transformer的解码器</mark>。</li>
+<li>5个目标，包括视频文本的联合，条件掩码语言模型（CMLM）、条件掩码帧模型（CMFM）以及视频文本的对齐，还有语言的重建。</li>
+<li>两阶段的预训练策略，其中第一个是分阶段的预训练StageP，另一个是增强的视频表达EnhancedV。</li>
+<li>在视频数据集<code>HowTo100M</code>上进行预训练，同时，也做了一些下游的任务，在5个下游任务上都获得了最佳的结果。</li>
+</ul>
 <blockquote>
 <p>这里面一开始不太好理解的地方就是：整个网络设计的比较复杂，包括了4个组件，每个组件的任务要解决的问题都不太一样，另外它有5个目标，也就有了5个loss函数；它的训练过程也是分了两个阶段，所以看起来就有些复杂了。</p>
+</blockquote>
+<hr />
+<blockquote>
 <p>先来看一下文章里面给的这第1张图。坦白讲，一开始也不太能看得出这一张图里面想表达啥意思，这里这些个箭头表达的意思其实并不太明确。读完这篇文章之后再回过头来看大概能理解想表达的意思是说输入模型里面的数据是视频片段和文本对，训练好这个预训练模型之后，我可以拿他来做视频字幕的生成以及通过文本来检索视频这样的一些任务。</p>
 </blockquote>
 <p><img alt="fig1" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220529213836.jpg" /></p>
@@ -545,7 +551,7 @@
 同时它下面也有4个下游任务的描述，就是说拿这个预训练模型怎么去做下游的任务。其实这里很有意思啊，最近刚出来的一个CLIP这样一个算法，用对比学习来做的，跟这篇文章里提出来的前面这一部分很相似，分别有一个<code>text encoder</code>和一个<code>video encoder</code>。在这个文本和视频的联合任务里面，他其实会去算这两个输出之间的一个相似度，这就是CLIP正在做的事情，在后面CLIP的论文精度里面再进一步分析看看。</p>
 </blockquote>
 <p><img alt="fig3" src="https://fsh.bcebos.com/lcx01/20220529214705.jpg" /></p>
-<h3 id="2_1">2. 结论<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<h3 id="2">2. 结论<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p>这篇文章的结论写的比较简单，总体上就是回顾了一下这个网络的设计情况，然后提到效果和精度比较好。但并没有分析论文算法的不足之处或者是可以改进的地方，最后只讲到了可能会在更大的数据集或者更多的一些下游任务上做更多的一些工作。忽略。</p>
 <h3 id="3">3. 实验<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <h4 id="_3">数据集介绍<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
@@ -664,7 +670,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: 写在开始" rel="prev">
+        <a href="../Omnimatte-%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9B%AE%E6%A0%87%E5%8F%8A%E5%85%B6effects%E7%9A%84%E5%85%B3%E8%81%94/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Omnimatte 视频中目标及其effects的关联" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -673,7 +679,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              写在开始
+              Omnimatte 视频中目标及其effects的关联
             </div>
           </div>
         </a>
@@ -709,6 +715,8 @@
         <script src="../mathjax-config.js"></script>
       
         <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../js/baidutongji.js"></script>
       
     
   </body>
