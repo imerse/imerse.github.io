@@ -3,7 +3,9 @@ theme:
   name: material
   features:
     - content.tabs.link
-
+  palette:
+    primary: 'Deep Purple'
+    accent: 'Deep Purple'
 # nav:
 #   - Home: index.md
 #   - About: about.md
@@ -46,4 +48,7 @@ extra_javascript:
   # other extra java script
   - mathjax-config.js
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - 'js/baidutongji.js'
 
+extra_css:
+  - extra.css

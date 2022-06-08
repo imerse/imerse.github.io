@@ -4,21 +4,20 @@
 - 论文名称：UniVL: A Unified Video and Language Pre-Training Model for Multimodal Understanding and Generation [202002CVPR]
 - 创建日期：2022.05.29
 - 创建人：扶云
-
-### 2. 修订历史
-
-时间	版本号	修订人	主要修订内容
-			
+  
 ## 二、算法介绍
 ### 1. 核心思想
 
 这篇文章提出了一个统一的视频和语言预训练模型，可用于多模态的理解和生成任务。它包括了
-- 4个组件，其中包括==两个单模态的编码器，一个交叉编码器，还有一个基于transformer的解码器==。
+
+- 4个组件，其中包括 ==两个单模态的编码器，一个交叉编码器，还有一个基于transformer的解码器==。
 - 5个目标，包括视频文本的联合，条件掩码语言模型（CMLM）、条件掩码帧模型（CMFM）以及视频文本的对齐，还有语言的重建。
 - 两阶段的预训练策略，其中第一个是分阶段的预训练StageP，另一个是增强的视频表达EnhancedV。
 - 在视频数据集`HowTo100M`上进行预训练，同时，也做了一些下游的任务，在5个下游任务上都获得了最佳的结果。
 
 > 这里面一开始不太好理解的地方就是：整个网络设计的比较复杂，包括了4个组件，每个组件的任务要解决的问题都不太一样，另外它有5个目标，也就有了5个loss函数；它的训练过程也是分了两个阶段，所以看起来就有些复杂了。
+
+---
 
 > 先来看一下文章里面给的这第1张图。坦白讲，一开始也不太能看得出这一张图里面想表达啥意思，这里这些个箭头表达的意思其实并不太明确。读完这篇文章之后再回过头来看大概能理解想表达的意思是说输入模型里面的数据是视频片段和文本对，训练好这个预训练模型之后，我可以拿他来做视频字幕的生成以及通过文本来检索视频这样的一些任务。
 
@@ -54,15 +53,15 @@
 #### 实验结果
 先介绍一下实验过程中的一些参数配置或者是具体的模型配置。
 
+!!! summary "两个单模态配置"
+    === "text-encoder"
+        1. BERT-base
+        2. 12 layers of Transformer blocks(每个block包含12个attention heads，隐藏层大小是768)
 
-=== "text-encoder"
-    1. BERT-base
-    2. 12 layers of Transformer blocks(每个block包含12个attention heads，隐藏层大小是768)
-
-=== "video-encoder"
-    1. S3D 模型
-    2. fps: 16, dimension: 1024
-    3. 6 layers of Transformer blocks(每个block包含12个attention heads，隐藏层大小是768)
+    === "video-encoder"
+        1. S3D 模型
+        2. fps: 16, dimension: 1024
+        3. 6 layers of Transformer blocks(每个block包含12个attention heads，隐藏层大小是768)
 
 采用了8块V100进行训练。训练过程分两个阶段
 
@@ -70,17 +69,17 @@
 - 第2个阶段, batch size设置为48，然后要训练50个epoch，大概需要12天，lr=1e-4
 
 这里面的实验结果，主要针对5个任务分别做了分析，具体如下：
+!!! summary "5个目标任务"
+    === "基于文本的图像检索"
+        输入一个text query，然后来检索视频片段。这有两种计算 text embedding 和 video embedding 的方式，一种是 UniVL（FT-Joint），这种方式直接通过点乘来计算相似度得分，一种是 UniVL（FT-Align），获取embedding之后会继续输入到cross encoder 中得到统一的表达，然后预测匹配得分。可以看下面这个检索结果。通过cross encoder之后的精度可以有明显提升(在MSR-VTT上差距不大)，而且相比之前的一个其他方法，精度有大幅的提升。
+        ![](https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com//20220530204629.jpg)
 
-=== "基于文本的图像检索"
-    输入一个text query，然后来检索视频片段。这有两种计算 text embedding 和 video embedding 的方式，一种是 UniVL（FT-Joint），这种方式直接通过点乘来计算相似度得分，一种是 UniVL（FT-Align），获取embedding之后会继续输入到cross encoder 中得到统一的表达，然后预测匹配得分。可以看下面这个检索结果。通过cross encoder之后的精度可以有明显提升(在MSR-VTT上差距不大)，而且相比之前的一个其他方法，精度有大幅的提升。
-    ![](https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com//20220530204629.jpg)
+    === "多模态字幕生成"
+        这里也是可以看到相比之前的一些方法，精度都得到了明显的提升，但这里的这些评估的指标的计算方式还没有进一步的去看。还是没太理解他这个transcript是啥意思。
+        ![](https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com//20220530204811.jpg)
 
-=== "多模态字幕生成"
-    这里也是可以看到相比之前的一些方法，精度都得到了明显的提升，但这里的这些评估的指标的计算方式还没有进一步的去看。还是没太理解他这个transcript是啥意思。
-    ![](https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com//20220530204811.jpg)
-
-=== "其他"
-    其他几个目标任务的结果就不继续展开了，可以看看原论文中的几个结果table
+    === "其他"
+        其他几个目标任务的结果就不继续展开了，可以看看原论文中的几个结果table
 
 
 ### 4. 详细过程
