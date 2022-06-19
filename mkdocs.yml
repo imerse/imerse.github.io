@@ -3,12 +3,13 @@ theme:
   name: material
   features:
     - content.tabs.link
+    - navigation.tabs
   palette:
     primary: 'Deep Purple'
     accent: 'Deep Purple'
 # nav:
-#   - Home: index.md
-#   - About: about.md
+#   - 首页: index.md
+#   - 精读: about.md
 
 # other settings ...
 
