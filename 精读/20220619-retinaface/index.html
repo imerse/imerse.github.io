@@ -1,0 +1,898 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>20220619 retinaface - 日拱一卒</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="日拱一卒" class="md-header__button md-logo" aria-label="日拱一卒" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            日拱一卒
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20220619 retinaface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      写在开始
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2/20220612-solov2-%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/" class="md-tabs__link">
+        浅尝辄止
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../20220529-UniVL-%E5%A4%9A%E6%A8%A1%E6%80%81%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E5%92%8C%E7%94%9F%E6%88%90/" class="md-tabs__link md-tabs__link--active">
+        精读
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="日拱一卒" class="md-nav__button md-logo" aria-label="日拱一卒" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    日拱一卒
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        写在开始
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          浅尝辄止
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="浅尝辄止" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          浅尝辄止
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2/20220612-solov2-%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/" class="md-nav__link">
+        20220612 solov2 实例分割
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          精读
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="精读" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          精读
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220529-UniVL-%E5%A4%9A%E6%A8%A1%E6%80%81%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E5%92%8C%E7%94%9F%E6%88%90/" class="md-nav__link">
+        20220529 UniVL 多模态视频理解和生成
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220605-Omnimatte-%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9B%AE%E6%A0%87%E5%8F%8A%E5%85%B6effects%E7%9A%84%E5%85%B3%E8%81%94/" class="md-nav__link">
+        20220605 Omnimatte 视频中目标及其effects的关联
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220608-SCRFD-%E6%A0%B7%E6%9C%AC%E5%92%8C%E8%AE%A1%E7%AE%97%E9%87%8D%E5%88%86%E9%85%8D/" class="md-nav__link">
+        20220608 SCRFD 样本和计算重分配
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          20220619 retinaface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        20220619 retinaface
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、文档更新记录
+  </a>
+  
+    <nav class="md-nav" aria-label="一、文档更新记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 版本信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、算法介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="二、算法介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1. 核心思想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 结论和展望
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 实验
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 实验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    数据集介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    指标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    消融实验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    精度对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    密集人脸精度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    人脸识别精度对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    推理耗时
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 详细过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    三、附件
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、文档更新记录
+  </a>
+  
+    <nav class="md-nav" aria-label="一、文档更新记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 版本信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、算法介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="二、算法介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1. 核心思想
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 结论和展望
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 实验
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 实验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    数据集介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    指标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    消融实验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    精度对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    密集人脸精度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    人脸识别精度对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    推理耗时
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 详细过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    三、附件
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>20220619 retinaface</h1>
+
+<h2 id="_1">一、文档更新记录<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 版本信息<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>版本号：v1</li>
+<li>论文名称：RetinaFace: Single-stage Dense Face Localisation in the Wild [CVPR 201905]</li>
+<li>创建日期：2022.06.19</li>
+<li>创建人：扶云</li>
+</ul>
+<h2 id="_2">二、算法介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">1. 核心思想<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在WIDER FACE数据集上<code>手动标注了5个面部标志</code>，并观察到在这个额外的监督信号的帮助下，hard face检测结果显著改进;</li>
+<li>我们进一步<code>添加了一个自监督网格解码器分支</code>，与现有的监督分支并行预测像素级三维形状人脸信息；【一个辅助任务带来检测的精度提升，类似mask rcnn的mask预测】</li>
+<li>在WIDER FACE硬测试集上，RetinaFace比目前水平的平均精度(AP)高出1.1%(实现AP等于91.4%)；</li>
+<li>通过采用轻量级骨干网，RetinaFace可以在<code>单个CPU核上实时</code>运行vga分辨率的图像</li>
+</ol>
+<blockquote>
+<p>引入了一个更广泛的人脸定位的定义，包括人类检测、人脸对齐、像素级人脸解析和3D密集对应回归【其实就是引入了多任务】</p>
+<p>人脸检测跟普通目标检测的区别：人脸检测具有较小的比例变化(从1:1到1:1.5)，但更大的尺度变化(从几个像素到上千像素)。</p>
+</blockquote>
+<p><img alt="20220702094927" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702094927.png" /></p>
+<blockquote>
+<p>MTCNN[66]和STN[5]同时检测人脸和5个面部标志。由于训练数据的限制，JDA[6]、MTCNN[66]和STN[5]还没有验证微小人脸检测是否可以受益于5个面部标志的额外监督；
+在MASK R-CNN[20]中，通过在现有的边界框识别和回归分支的基础上增加用于预测对象mask的分支，显著提高了检测性能。这证实了密集的像素级注释也有利于改进检测。</p>
+</blockquote>
+<p>对于wider face的挑战性人脸检测任务，不可能进行密集的人脸标注(无论是以更多地标的形式还是以语义分段的形式)。由于监督信号不容易获得，问题是我们是否可以应用非监督方法来进一步改进人脸检测：</p>
+<ul>
+<li>我们使用自监督学习的网格解码器[70]分支与现有的监督分支并行地预测像素级的3D人脸形状。</li>
+</ul>
+<p>总结来说：</p>
+<ol>
+<li>单阶段设计：采用多任务学习策略来同时预测人脸分数、人脸box、五个人脸标志点【有监督】以及每个人脸像素的3D位置和对应关系【自监督】。</li>
+<li>在更广泛的hard face子集上，RetinaFace比最先进的两阶段方法(ISRN[67])的AP性能高1.1%(AP等于91.4%)。【？？？】</li>
+<li>在IJB-C数据集上，RetinaFace有助于提高ArcFace的[11]验证精度(当Far<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>=1e-6时，tar等于89.59%)。这表明，更好的人脸定位可以显著提高人脸识别能力。</li>
+</ol>
+<h3 id="2">2. 结论和展望<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>无</p>
+<h3 id="3">3. 实验<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h4 id="_3">数据集介绍<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p><code>WIDER FACE</code>略，<a href="/精读/20220608-SCRFD-样本和计算重分配/#_3">参见</a></p>
+<p>将人脸数据集分为训练(40%)、验证(10%)和测试(50%)子集。</p>
+<ol>
+<li>新增5点landmark: 总共，我们在<code>训练集上标注了84.6k个人脸，在验证集中标注了18.5k个人脸</code>
+   <img alt="20220702105007" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702105007.png" />
+   不同的人脸质量占比情况如下：
+   <img alt="20220702105149" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702105149.png" /></li>
+</ol>
+<p><code>AFLW2000-3D dataset</code>：用于验证密集人脸landmark的精度</p>
+<h4 id="_4">指标<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>指标：AP即AP0.5，在iou=0.5的条件下计算的平均精度；mAP即AP(0.5:0.05:0.95)，在IoU=0.5:0.05:0.95分别计算AP之后取平均。</p>
+<h4 id="_5">消融实验<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>下表可以说明：</p>
+<ul>
+<li>增加5个关键点很有效；</li>
+<li>仅增加dense 像素回归并没有帮助</li>
+<li>同时增加以上两个，能进一步提高检测性能。</li>
+</ul>
+<p><img alt="20220702113327" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702113327.png" /></p>
+<h4 id="_6">精度对比<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>这个图表里面详细的对比了跟其他算法的精度情况，均取得了最好的精度。</p>
+</blockquote>
+<p><img alt="20220702114305" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702114305.png" /></p>
+<h4 id="_7">密集人脸精度<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>对比了68个landmark和 all landmark下的精度情况，RetinaFace可以轻松处理姿态变化的人脸【(⊙o⊙)…】，但难以预测复杂场景下的精确密集3D估计。</p>
+<p><img alt="20220702115433" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702115433.png" /></p>
+<h4 id="_8">人脸识别精度对比<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>在公平的比较下，TAR(在FAR=1e−6时)只需用RetinaFace取代MTCNN，就能从88.29%显著提高到89.59%。</p>
+<p><img alt="20220702115752" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702115752.png" /></p>
+<h4 id="_9">推理耗时<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>RetinaFaceResNet-152专为高精度的人脸定位而设计，对于VGA图像(640×480)，运行速度为13 FPS。</li>
+<li>相比之下，RetinaFace-MobileNet-0.25专为高效的人脸定位而设计，对于4K图像(4096×2160)在GPU上的实时速度为40 FPS，对于高清图像(1920×1080)在多线程CPU上为20 FPS，对于VGA图像(640×480)在单线程CPU上为60 FPS。</li>
+</ul>
+<p><img alt="20220702120015" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702120015.png" /></p>
+<p>【略：跟MTCNN比较5个关键点的精度；</p>
+<h3 id="4">4. 详细过程<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>先看下网络结构图：</p>
+<p><img alt="20220702105310" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702105310.png" /></p>
+<div class="admonition summary">
+<p class="admonition-title">主要模块</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">特色金字塔</label><label for="__tabbed_1_2">上下文模块</label><label for="__tabbed_1_3">loss head</label><label for="__tabbed_1_4">anchor 设置</label><label for="__tabbed_1_5">数据增强</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>RetinaFace使用从P2到P6的特征金字塔级别，其中P2到P5是从对应的ResNet residual stage(C2到C5)的输出使用自顶向下和横向连接来计算的；</p>
+<p>P6在C5上通过3×3卷积计算，步长=2。</p>
+<p>C1到C5是ImageNet-11k数据集上的预训练ResNet-152[21]分类网络，而P6是用“Xille”方法随机初始化的[17]。</p>
+</div>
+<div class="tabbed-block">
+<p>受SSH[36]和金字塔[49]的启发，我们还在五个特征金字塔层次上应用了独立的上下文模块，以增加感受野并增强rigid上下文建模能力。</p>
+<p>还用可变形卷积网络(DCN)[9，74]取代了侧向连接和上下文模块内的所有3×3卷积层，进一步增强了non-rigid上下文建模能力。</p>
+</div>
+<div class="tabbed-block">
+<p>对于负锚，仅应用分类损失。对于正锚，计算多任务损失。我们在不同的特征map <span class="arithmatex"><span class="MathJax_Preview">H_n×W_n×256，n∈\{2...6\}</span><script type="math/tex">H_n×W_n×256，n∈\{2...6\}</script></span>。</p>
+<p>对于网格解码器，我们应用了预先训练的模型[70]，高效推理、计算开销小。</p>
+</div>
+<div class="tabbed-block">
+<p>长宽比是1:1；当输入图像大小为640×640时，锚点可以覆盖特征金字塔层次上从16×16到406×406的尺度，总共有102,300个anchors，其中75%来自P2。
+<img alt="20220702112544" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220702112544.png" /></p>
+<ul>
+<li>在训练过程中，<code>当IOU大于0.5时，anchor被匹配到gt box，当IOU小于0.3时，anchor被匹配到背景</code>。不匹配的anchor在训练期间被忽略。</li>
+<li>由于大多数锚(&gt;99%)在匹配步骤后是negative，我们使用标准的OHEM[47，68]来缓解正训练样本和负训练样本之间的显著失衡。更具体地说，我们根据损失值对负锚进行排序，并选择前几个锚，<code>使负样本与正样本的比例至少为3：1</code>。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>由于在更广泛的人脸训练集中大约有20%的小人脸，我们遵循[68，49]，从原始图像中随机裁剪正方形小块，并将这些小块调整为640×640以生成更大的训练人脸。从原始图像中<code>以原始图像短边的[0.3，1]之间的随机大小裁剪</code>正方形面片。</p>
+</div>
+</div>
+</div>
+</div>
+<p>我们在四个NVIDIA Tesla P40(24 GB)GPU上使用SGD优化器(动量为0.9%，权重衰减为0.0005，批大小为8×4)训练RetinaFace。</p>
+<p>学习速率从10−3开始，在5个周期后上升到10−2，然后在55和68个周期除以10。训练过程在80个epochs结束。</p>
+<h2 id="_10">三、附件<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p><a href="https://arxiv.org/abs/1905.00641">原始论文</a></p>
+<p><a href="https://github.com/deepinsight/insightface/tree/master/RetinaFace">github</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>跟TPR/FPR不同，这里的TAR（True Accept Rate）和FAR（False Accept Rate）主要是应用在人脸识别中，<span class="arithmatex"><span class="MathJax_Preview">FAR=\frac{非同人分数 &gt; T}{非同人比较的次数}</span><script type="math/tex">FAR=\frac{非同人分数 > T}{非同人比较的次数}</script></span>，也就是我们比较不同人的图像时，把其中的图像对当成同一个人图像的比例。我们希望FAR越小越好。TAR类比。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../20220608-SCRFD-%E6%A0%B7%E6%9C%AC%E5%92%8C%E8%AE%A1%E7%AE%97%E9%87%8D%E5%88%86%E9%85%8D/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 20220608 SCRFD 样本和计算重分配" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              20220608 SCRFD 样本和计算重分配
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../../mathjax-config.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../js/baidutongji.js"></script>
+      
+    
+  </body>
+</html>
