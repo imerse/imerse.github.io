@@ -18,6 +18,24 @@ graph TD
     S --> L2("L2(MSE) loss") 
 ```
 
+#### 检测评估指标 系列
+
+``` mermaid
+graph TD
+    S("检测指标") --> TY("通用指标")--> MA("MAP")
+    S --> FD("人脸检测") --> MA
+
+
+```
+
+#### 人脸识别
+
+``` mermaid
+graph TD
+    S("人脸识别") --> FA("FAR+PAR")
+```
+
+
 
 #### 压缩 系列
 

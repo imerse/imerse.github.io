@@ -63,7 +63,7 @@ graph TD
 #### 人脸 系列
 ``` mermaid
 graph TD
-    S("人脸检测") --> RE(retinaface) --"nas,计算和样本搜索分配"--> SC("SCRFD")
+    S("人脸检测") --"add 5landmarks(multi-task),context modeling,dcn,light weight"--> RE(retinaface1905) --"nas,计算和样本搜索分配"--> SC("SCRFD2105")
     
 ```
 ---
