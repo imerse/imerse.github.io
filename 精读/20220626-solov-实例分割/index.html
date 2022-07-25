@@ -13,7 +13,7 @@
     
     
       
-        <title>20220529 UniVL 多模态视频理解和生成 - 日拱一卒</title>
+        <title>20220626 solov 实例分割 - 日拱一卒</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              20220529 UniVL 多模态视频理解和生成
+              20220626 solov 实例分割
             
           </span>
         </div>
@@ -195,7 +195,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../20220529-UniVL-%E5%A4%9A%E6%A8%A1%E6%80%81%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E5%92%8C%E7%94%9F%E6%88%90/" class="md-tabs__link md-tabs__link--active">
         精读
       </a>
     </li>
@@ -331,6 +331,62 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../20220529-UniVL-%E5%A4%9A%E6%A8%A1%E6%80%81%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E5%92%8C%E7%94%9F%E6%88%90/" class="md-nav__link">
+        20220529 UniVL 多模态视频理解和生成
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220605-Omnimatte-%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9B%AE%E6%A0%87%E5%8F%8A%E5%85%B6effects%E7%9A%84%E5%85%B3%E8%81%94/" class="md-nav__link">
+        20220605 Omnimatte 视频中目标及其effects的关联
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220608-SCRFD-%E6%A0%B7%E6%9C%AC%E5%92%8C%E8%AE%A1%E7%AE%97%E9%87%8D%E5%88%86%E9%85%8D/" class="md-nav__link">
+        20220608 SCRFD 样本和计算重分配
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20220619-retinaface/" class="md-nav__link">
+        20220619 retinaface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -341,12 +397,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          20220529 UniVL 多模态视频理解和生成
+          20220626 solov 实例分割
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        20220529 UniVL 多模态视频理解和生成
+        20220626 solov 实例分割
       </a>
       
         
@@ -399,7 +455,7 @@
         
           <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2. 结论
+    2. 结论和展望
   </a>
   
 </li>
@@ -426,6 +482,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    消融实验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    错误分析
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -440,8 +510,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    训练策略
+  <a href="#label-assignment" class="md-nav__link">
+    label assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss-function" class="md-nav__link">
+    loss function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decoupleap06" class="md-nav__link">
+    decouple【AP+0.6%】
   </a>
   
 </li>
@@ -471,7 +555,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     三、附件
   </a>
   
@@ -481,62 +565,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../20220605-Omnimatte-%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9B%AE%E6%A0%87%E5%8F%8A%E5%85%B6effects%E7%9A%84%E5%85%B3%E8%81%94/" class="md-nav__link">
-        20220605 Omnimatte 视频中目标及其effects的关联
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../20220608-SCRFD-%E6%A0%B7%E6%9C%AC%E5%92%8C%E8%AE%A1%E7%AE%97%E9%87%8D%E5%88%86%E9%85%8D/" class="md-nav__link">
-        20220608 SCRFD 样本和计算重分配
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../20220619-retinaface/" class="md-nav__link">
-        20220619 retinaface
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../20220626-solov-%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/" class="md-nav__link">
-        20220626 solov 实例分割
-      </a>
     </li>
   
 
@@ -609,7 +637,7 @@
         
           <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2. 结论
+    2. 结论和展望
   </a>
   
 </li>
@@ -636,6 +664,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    消融实验
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    错误分析
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -650,8 +692,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    训练策略
+  <a href="#label-assignment" class="md-nav__link">
+    label assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loss-function" class="md-nav__link">
+    loss function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decoupleap06" class="md-nav__link">
+    decouple【AP+0.6%】
   </a>
   
 </li>
@@ -681,7 +737,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     三、附件
   </a>
   
@@ -701,144 +757,129 @@
                 
 
 
-  <h1>20220529 UniVL 多模态视频理解和生成</h1>
+  <h1>20220626 solov 实例分割</h1>
 
 <h2 id="_1">一、文档更新记录<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="1">1. 版本信息<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>版本号：v1</li>
-<li>论文名称：UniVL: A Unified Video and Language Pre-Training Model for Multimodal Understanding and Generation [202002CVPR]</li>
-<li>创建日期：2022.05.29</li>
+<li>论文名称：SOLO: <code>S</code>egmenting <code>O</code>bjects by <code>Lo</code>cations [201912ECCV]</li>
+<li>创建日期：2022.06.26</li>
 <li>创建人：扶云</li>
 </ul>
 <h2 id="_2">二、算法介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="1_1">1. 核心思想<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<p>这篇文章提出了一个统一的视频和语言预训练模型，可用于多模态的理解和生成任务。它包括了</p>
-<ul>
-<li>4个组件，其中包括 <mark>两个单模态的编码器，一个交叉编码器，还有一个基于transformer的解码器</mark>。</li>
-<li>5个目标，包括视频文本的联合，条件掩码语言模型（CMLM）、条件掩码帧模型（CMFM）以及视频文本的对齐，还有语言的重建。</li>
-<li>两阶段的预训练策略，其中第一个是分阶段的预训练StageP，另一个是增强的视频表达EnhancedV。</li>
-<li>在视频数据集<code>HowTo100M</code>上进行预训练，同时，也做了一些下游的任务，在5个下游任务上都获得了最佳的结果。</li>
-</ul>
-<blockquote>
-<p>这里面一开始不太好理解的地方就是：整个网络设计的比较复杂，包括了4个组件，每个组件的任务要解决的问题都不太一样，另外它有5个目标，也就有了5个loss函数；它的训练过程也是分了两个阶段，所以看起来就有些复杂了。</p>
-</blockquote>
-<hr />
-<blockquote>
-<p>先来看一下文章里面给的这第1张图。坦白讲，一开始也不太能看得出这一张图里面想表达啥意思，这里这些个箭头表达的意思其实并不太明确。读完这篇文章之后再回过头来看大概能理解想表达的意思是说输入模型里面的数据是视频片段和文本对，训练好这个预训练模型之后，我可以拿他来做视频字幕的生成以及通过文本来检索视频这样的一些任务。</p>
-</blockquote>
-<p><img alt="fig1" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220529213836.jpg" /></p>
-<blockquote>
-<p>所以这样子我们还不如来看第3张图，把整个模型的结构描述得相对来说比较清晰，它包括了几4个组件以及对应的5个任务。
-同时它下面也有4个下游任务的描述，就是说拿这个预训练模型怎么去做下游的任务。其实这里很有意思啊，最近刚出来的一个CLIP这样一个算法，用对比学习来做的，跟这篇文章里提出来的前面这一部分很相似，分别有一个<code>text encoder</code>和一个<code>video encoder</code>。在这个文本和视频的联合任务里面，他其实会去算这两个输出之间的一个相似度，这就是CLIP正在做的事情，在后面CLIP的论文精度里面再进一步分析看看。</p>
-</blockquote>
-<p><img alt="fig3" src="https://fsh.bcebos.com/lcx01/20220529214705.jpg" /></p>
-<h3 id="2">2. 结论<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>这篇文章的结论写的比较简单，总体上就是回顾了一下这个网络的设计情况，然后提到效果和精度比较好。但并没有分析论文算法的不足之处或者是可以改进的地方，最后只讲到了可能会在更大的数据集或者更多的一些下游任务上做更多的一些工作。忽略。</p>
+<ol>
+<li>提出了一种新的、简单得令人尴尬的实例分割方法；</li>
+<li>引入<code>“实例类别”</code>的概念，根据实例的位置（location）和大小（size）将类别分配给实例中的每个像素，从而很好地<code>将实例分割转化为一次性分类可解决</code>的问题；</li>
+<li>具有很强的性能，达到了与Mask R-CNN相当的精度，并且在精度上优于最近的single shot实例分割器</li>
+</ol>
+<p>实例分割一般做法：</p>
+<ol>
+<li><code>top-down</code>: 遵循“检测然后分段”策略(例如，mask R-CNN)</li>
+<li><code>bottom-up</code>: 先预测embedding层向量，然后使用聚类技术将像素分组到各个实例中</li>
+</ol>
+<p>直接看下算法的结构：</p>
+<p><img alt="20220725163239" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725163239.png" /></p>
+<pre class="mermaid"><code>graph LR
+  backbone --&gt; fpn --&gt; FCN --"to S*S*C, each grid-&gt;one ins cate"--&gt; C("Category Branch") --&gt; ME
+  FCN --"to H*W*S^2,each grid-&gt;one Channel"--&gt; M("Mask Branch") --&gt; ME("gather &amp; nms")</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol>
+<li>直接根据位置和大小来区分不同的实例，所以前置不需要检测box，也不需要后面来做聚类。</li>
+<li>一个grid cell 负责预测一个 实例（前提条件，也是假设），多个相邻的mask channel来预测一个实例的mask，最后做nms。</li>
+</ol>
+</div>
+<h3 id="2">2. 结论和展望<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>端到端训练</li>
+<li>简单、灵活，且性能强大</li>
+<li>推理事件恒定</li>
+</ol>
+<p>后续可以展开的点：
+todo</p>
 <h3 id="3">3. 实验<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <h4 id="_3">数据集介绍<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>这里简单的先介绍一下，这里面会用到的一些数据集，这一块之前接触的比较少一点。每一个数据集都是用来评估不同的任务的。</p>
 <ol>
-<li>Youcook2
-   Youcook2（Zhou等人，2018a）<mark>包含89个食谱的2000个烹饪视频，有14K个视频片段。整体时长为176小时（平均5.26分钟）</mark>。每个视频片段都有一个字幕句子的注释</li>
-<li>MSR-VTT
-   是用于视频检索任务的开放域数据集。它有开放领域的视频片段，<mark>每个片段有20个由人类标记的字幕句子。总共有20万个片段-文本对，来自10K个视频，包括体育、音乐等20个类别。</mark></li>
-<li>COIN
-   COIN（Tang等人，2019）是为了评估动作分割任务，它包含180个不同的任务和11,827个视频。每个视频都被标记为3.91step 片段。总的来说，该数据集包含476小时的视频，有46354个注释的片段。</li>
-<li>CrossTask
-   CrossTask（Zhukov等人，2019）是为了评估动作步骤定位任务。它包含83个不同的任务和4.7k视频。对于每个任务，都提供了一个带有人工描述的有序的步骤列表。</li>
-<li>CMU-MOSI
-   多模态意见情绪和情感强度（Zadeh等人，2016）是在线视频中的句子级情绪分析和情感识别。
-   CMU-MOSI包含2,199个意见视频片段，每个片段都在[-3, +3]范围内用实值的情感强度注释。我们评估了我们的模型在多模态情感分析中的表现。</li>
+<li><ins class="critic">coco 2017</ins>：在5k val2017做了消融实验</li>
 </ol>
+<p>训练细节：</p>
+<p>SOLO是用随机梯度下降(SGD)训练的。在8个GPU上使用sync SGD，每个mini-batch含16张图像。除非另有说明，所有模型都以0.01的初始学习率训练36个epoch，然后在第27个epoch除以10，并在第33个epoch再次除以10。使用0.0001的权重衰减和0.9的动量。所有模型都从ImageNet预训练权重初始化。使用缩放抖动（scale jitter），其中较短的图像边从640到800像素随机采样。</p>
 <h4 id="_4">实验结果<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>先介绍一下实验过程中的一些参数配置或者是具体的模型配置。</p>
-<div class="admonition summary">
-<p class="admonition-title">两个单模态配置</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">text-encoder</label><label for="__tabbed_1_2">video-encoder</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <ol>
-<li>BERT-base</li>
-<li>12 layers of Transformer blocks(每个block包含12个attention heads，隐藏层大小是768)</li>
+<li>SOLO用ResNet-101实现了一个mask AP 37.8%，是现有的两阶段实例分割方法(如Mask R-CNN)中的最优水平；</li>
+<li>SOLO优于所有以前的一阶段方法，包括TensorMask [4]；</li>
 </ol>
-</div>
-<div class="tabbed-block">
+<p><img alt="20220725165823" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725165823.png" /></p>
+<h4 id="_5">消融实验<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p><code>grid number</code></p>
+<p>不同的S取值，对整体精度的影响，以及加入多尺度（5层特征金字塔）之后，AP+6.8%。</p>
+<p><img alt="20220725170822" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725170822.png" /></p>
+<p><code>CoordConv</code>：空间敏感卷积</p>
+<p>普通卷积能学到一定的空间信息，但这种隐式学习到的位置信息粗糙且不准。所以这里借鉴了(CoordConv [17])，将额外的坐标channel concat到特征map上，AP+3.6%。</p>
+<p><img alt="20220725175146" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725175146.png" /></p>
+<p><code>损失函数</code></p>
 <ol>
-<li>S3D 模型</li>
-<li>fps: 16, dimension: 1024</li>
-<li>6 layers of Transformer blocks(每个block包含12个attention heads，隐藏层大小是768)</li>
+<li>比较了3个不同的损失：传统的二元交叉熵(BCE)、focal loss(FL)和dice loss(DL).</li>
+<li>focal loss 比BCE效果要好，因为实例mask的大多数像素在背景中，并且focal loss被设计成通过减少良好分类的样本的损失来减轻样本不平衡问题；（通过仔细调整平衡超参数并引入其他训练技巧，二元交叉熵和FL的结果可能会得到相当大的改善？但并未确认）</li>
+<li>dice loss实现了最佳结果，且无需手动调整损失超参数。Dice Loss将像素视为一个整体对象，可以自动在前景和背景像素之间建立正确的平衡。</li>
+<li>为了进行公平的比较，我们还在补充中显示了具有dice loss的mask R-CNN的结果，其性能比原始BCE loss更差(-0.9AP)。【不存在不均衡的问题】</li>
 </ol>
-</div>
-</div>
-</div>
-</div>
-<p>采用了8块V100进行训练。训练过程分两个阶段</p>
-<ul>
-<li>第1个阶段，batch size设置为600训练50个epoch大概需要花1.5天，lr=1e-3</li>
-<li>第2个阶段, batch size设置为48，然后要训练50个epoch，大概需要12天，lr=1e-4</li>
-</ul>
-<p>这里面的实验结果，主要针对5个任务分别做了分析，具体如下：</p>
-<div class="admonition summary">
-<p class="admonition-title">5个目标任务</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">基于文本的图像检索</label><label for="__tabbed_2_2">多模态字幕生成</label><label for="__tabbed_2_3">其他</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>输入一个text query，然后来检索视频片段。这有两种计算 text embedding 和 video embedding 的方式，一种是 UniVL（FT-Joint），这种方式直接通过点乘来计算相似度得分，一种是 UniVL（FT-Align），获取embedding之后会继续输入到cross encoder 中得到统一的表达，然后预测匹配得分。可以看下面这个检索结果。通过cross encoder之后的精度可以有明显提升(在MSR-VTT上差距不大)，而且相比之前的一个其他方法，精度有大幅的提升。
-<img alt="" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com//20220530204629.jpg" /></p>
-</div>
-<div class="tabbed-block">
-<p>这里也是可以看到相比之前的一些方法，精度都得到了明显的提升，但这里的这些评估的指标的计算方式还没有进一步的去看。还是没太理解他这个transcript是啥意思。
-<img alt="" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com//20220530204811.jpg" /></p>
-</div>
-<div class="tabbed-block">
-<p>其他几个目标任务的结果就不继续展开了，可以看看原论文中的几个结果table</p>
-</div>
-</div>
-</div>
+<p><img alt="20220725175327" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725175327.png" /></p>
+<p><code>类别分支对齐问题</code></p>
+<p>在类别预测分支中，我们必须匹配空间大小为H×W到S×S的卷积特征。这里，对比了三种常见的实现方式:插值、自适应池化和区域网格插值。</p>
+<p>根据我们的观察，这些变量之间没有明显的性能差距(±0.1AP)，表明align过程对最终精度没有显著影响。</p>
+<h4 id="_6">错误分析<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>为了定量地理解掩蔽预测的SOLO，我们通过用真实值替换预测的mask来执行误差分析。对于每个预测的二进制掩码，我们用gt mask计算iou，并用最重叠的gt mask替换它。如表7所示，如果我们用gt mask替换预测掩码，AP将增加到68.1%。这个实验表明，mask分支还有很大的改进空间。</p>
+<p><mark>改进方向</mark>：(a)在语义分割方面优化，(b)用于处理遮挡/微小对象的技术能够被应用来提高性能。</p>
+<p><img alt="20220725181741" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725181741.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>意思是目标的检测和定位已经比较好了，改进mask就可以得到大幅的ap提升，所以这块还有很多可以做的。</p>
 </div>
 <h3 id="4">4. 详细过程<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<p>这里进一步的看一下整个算法设计的具体步骤。还包含一些公式相关的推理。</p>
-<p>整体上采用的是encoder-decoder的结构，最后decoder输出的结果是用于重建input text。这里大体上就像下面这样一个流程图，把整个的架构描述出来了，具体的过程就不再详细的看了。</p>
-<pre class="mermaid"><code>graph TD
-    T(text) --&gt; B(Bert) --R^n*d--&gt; E1( )
-    V(video) --get feature--&gt; Enc1(S3D) --"F_v"--&gt; T1("transformer(F_v)") --R^m*d--&gt; E( )
-    E1--&gt; CA("cat")
-    E--&gt; CA
-    CA --"cross encoder: R^(m+n)*d"--&gt; C("M=Transformer[T;V]") --decoder--&gt; D("Transformer[M]") --&gt; generation</code></pre>
-<p>接下来看一下目标函数和损失的计算。</p>
-<ul>
-<li>目标1：video-text joint，采用了MIL-NCE loss
-  <img alt="20220530215326" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220530215326.png" /></li>
-<li>目标2：条件掩码语言模型
-  <img alt="20220530220036" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220530220036.png" /></li>
-<li>目标3：条件掩码帧模型，也是采用NCE loss，随机的mask 15%的帧（置0），这里作者说很难去重建中间的帧，不是重建，而是去判别 ground truth 和噪音这二者属于mask部分的概率。
-  <img alt="20220530220124" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220530220124.png" /></li>
-<li>目标4：视频文本对齐，这里左边的一项是通过一个线型的变换来得到对应视频和文本的match score，右边这一项是文本跟同一个batch其他帧之间的一个 match score.
-  <img alt="20220530220523" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220530220523.png" /></li>
-<li>目标5：文本重建
-  <img alt="20220530221755" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220530221755.png" /></li>
-<li>最后的loss是加权之和：
-  <img alt="20220530221908" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220530221908.png" /></li>
-</ul>
-<h4 id="_5">训练策略<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>SOLO框架的中心思想是将实例分割重新定义为两个同时的类别感知预测问题。具体而言，我们的系统将输入图像划分成统一的网格，即S×S。如果对象的中心落入网格单元，则该网格单元负责</p>
 <ol>
-<li>StageP</li>
+<li>预测语义类别：head部分输出<span class="arithmatex"><span class="MathJax_Preview">S*S*C</span><script type="math/tex">S*S*C</script></span>的map，每个grid 的cell，C个channel最多有一个分类，这里假定了一个grid最多预测一个类别；</li>
+<li>分割该对象实例：每个positive grid cell 会生成一个对应的实例 mask。所以对 S * S 个grid，会输出 <span class="arithmatex"><span class="MathJax_Preview">H_I*W_I*S^2</span><script type="math/tex">H_I*W_I*S^2</script></span> 维度的output，<span class="arithmatex"><span class="MathJax_Preview">k^{th}</span><script type="math/tex">k^{th}</script></span>channel 对应上面语义类别的<span class="arithmatex"><span class="MathJax_Preview">(i, j)</span><script type="math/tex">(i, j)</script></span>，满足<span class="arithmatex"><span class="MathJax_Preview">k=i*S+j</span><script type="math/tex">k=i*S+j</script></span>。</li>
 </ol>
-<p>在第一阶段，只保留文本BERT和视频变换器，使用视频-文本联合损失公式（5）学习权重。
-接下来，降低学习率，继续通过所有五个目标对UniVL进行进一步的预训练。
-好处：一是加快预训练的速度，另一个是使预训练的进度对权重更加平滑。</p>
-<ol>
-<li>EnhancedV: Enhanced Video Representation</li>
-</ol>
-<p>用15%的可能性来掩盖整个文本标记。换句话说，在每个小批次中，有15%的文本视频对有整个文本标记被屏蔽，是模型利用视频信息来完成生成。这样学习到的视频表示效果会更好。</p>
+<blockquote>
+<p>确认了类别，和mask，就获得了最后的实例分割结果</p>
+</blockquote>
+<p><mark>如何预测实例mask？</mark></p>
+<p>直接的想法就是李永类似FCN的结构，但FCN对空间位置不敏感，采用<code>CoordConv</code>来加入位置敏感信息【直接加入归一化的像素坐标】，参考下图：</p>
+<p><img alt="20220725220459" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725220459.png" /></p>
+<blockquote>
+<p>2个head除了最后一个conv其他层都是共享参数的。</p>
+</blockquote>
+<p>初始的实例分割结果就是汇聚所有的grid 预测结果，然后进行nms。</p>
+<h5 id="label-assignment">label assignment<a class="headerlink" href="#label-assignment" title="Permanent link">&para;</a></h5>
+<p>当，grid (i,j) 落在任何gt mask 的center 区域的时候，被认定为一个positive sample，否则为负样本。</p>
+<p><code>center 区域的定义</code>：计算质心<span class="arithmatex"><span class="MathJax_Preview">(c_x, c_y)</span><script type="math/tex">(c_x, c_y)</script></span>，然后取一个中心区域<span class="arithmatex"><span class="MathJax_Preview">(c_x, c_y, \alpha w, \alpha h), \alpha=0.2</span><script type="math/tex">(c_x, c_y, \alpha w, \alpha h), \alpha=0.2</script></span> by default。这样算下来，平均每个gt会对应3个positive sample。</p>
+<p><img alt="20220725222700" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725222700.png" /></p>
+<blockquote>
+<p>关于 <span class="arithmatex"><span class="MathJax_Preview">S^2</span><script type="math/tex">S^2</script></span> 个channel 与 <span class="arithmatex"><span class="MathJax_Preview">S*S</span><script type="math/tex">S*S</script></span>grid对应顺序的问题，目前看影响不大，按行的顺序即可。</p>
+</blockquote>
+<h5 id="loss-function">loss function<a class="headerlink" href="#loss-function" title="Permanent link">&para;</a></h5>
+<p>损失函数定义如下：
+<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L=L_{cate} + \lambda L_{mask}</span><script type="math/tex">L=L_{cate} + \lambda L_{mask}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L=L_{cate} + \lambda L_{mask}</span><script type="math/tex">L=L_{cate} + \lambda L_{mask}</script></span></script></span>
+比较常规的加权loss，<span class="arithmatex"><span class="MathJax_Preview">L_{cate}</span><script type="math/tex">L_{cate}</script></span>一般为传统的Focal loss，<span class="arithmatex"><span class="MathJax_Preview">L_{mask}</span><script type="math/tex">L_{mask}</script></span>如下：
+<img alt="20220725221801" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725221801.png" /></p>
+<p>其中<span class="arithmatex"><span class="MathJax_Preview">N_pos</span><script type="math/tex">N_pos</script></span>是正样本总数，k 代表第k个channel【给定S的情况下，对应的可以算出i 和 j】，<span class="arithmatex"><span class="MathJax_Preview">p^*_{i,j}</span><script type="math/tex">p^*_{i,j}</script></span>代表(i,j)处如果是一个实例就&gt;0，否则=0. <span class="arithmatex"><span class="MathJax_Preview">d_mask</span><script type="math/tex">d_mask</script></span>就是两个mask之间的距离或者损失度量了。</p>
+<p>这里实现了3个版本，1. BCE，2.Focal loss，3. Dice loss。最后选择了dice loss，效果最好且最稳定。</p>
+<h5 id="decoupleap06">decouple【AP+0.6%】<a class="headerlink" href="#decoupleap06" title="Permanent link">&para;</a></h5>
+<p>以S=20为例，会输出400个channel，大部分情况下目标比较稀疏，所以矩阵会很冗余。所以相比普通的SOLO head，这里额外改进了一个解耦的head，原先是输出<span class="arithmatex"><span class="MathJax_Preview">H*W*S^2</span><script type="math/tex">H*W*S^2</script></span>，解耦x和y之后，输出就是<span class="arithmatex"><span class="MathJax_Preview">H*W*2S</span><script type="math/tex">H*W*2S</script></span>，一个x branch 一个 y branch，所以这里的mask输出：
+<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">mask_{instance} = map_{xj} * map_{yi}</span><script type="math/tex">mask_{instance} = map_{xj} * map_{yi}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">mask_{instance} = map_{xj} * map_{yi}</span><script type="math/tex">mask_{instance} = map_{xj} * map_{yi}</script></span></script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">map_{xj}</span><script type="math/tex">map_{xj}</script></span>和<span class="arithmatex"><span class="MathJax_Preview">map_{yi}</span><script type="math/tex">map_{yi}</script></span>分别是 X和Y 的 <span class="arithmatex"><span class="MathJax_Preview">j^{th}</span><script type="math/tex">j^{th}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">i^{th}</span><script type="math/tex">i^{th}</script></span> channel，元素相乘。</p>
+<p><img alt="20220725223015" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725223015.png" /></p>
 <h3 id="5">5. 应用场景<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
-<p>也就是上面的5个下游任务了。</p>
+<p>实例分割，目标轮廓识别。</p>
 <h3 id="6">6. 附图<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
-<p>这篇文章没有给出一些效果的图，主要就是一些精度的结果。这块可能需要跑一下代码才能看到效果了。</p>
-<h2 id="_6">三、附件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p><a href="https://arxiv.org/pdf/2002.06353.pdf">原始论文</a></p>
-<p><a href="https://github.com/microsoft/UniVL">github</a></p>
+<p><img alt="20220725222932" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725222932.png" /></p>
+<h2 id="_7">三、附件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><a href="https://arxiv.org/abs/1912.04488">https://arxiv.org/abs/1912.04488</a></p>
+<p><a href="https://github.com/WXinlong/SOLO">https://github.com/WXinlong/SOLO</a></p>
 
               
             </article>
@@ -856,7 +897,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2/20220612-solov2-%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 20220612 solov2 实例分割" rel="prev">
+        <a href="../20220619-retinaface/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 20220619 retinaface" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -865,26 +906,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              20220612 solov2 实例分割
+              20220619 retinaface
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../20220605-Omnimatte-%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9B%AE%E6%A0%87%E5%8F%8A%E5%85%B6effects%E7%9A%84%E5%85%B3%E8%81%94/" class="md-footer__link md-footer__link--next" aria-label="Next: 20220605 Omnimatte 视频中目标及其effects的关联" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              20220605 Omnimatte 视频中目标及其effects的关联
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
