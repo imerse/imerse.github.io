@@ -79,7 +79,7 @@ graph TD
     SJC("OCR-检测") --"可微分thresholdmap"--> DB(DBnet) 
     SSB("OCR-识别") --"CNN+RNN+CTC loss"--> CR(CRNN) 
 
-    DB-->CR
+    DB-->CR --"2D attention,enc-dec"--> SAR2018(SAR)
 
     SJC--> EA(EAST)
     EA --先检测--> BJ(文本编辑) --"文本骨架,文字移除,合成"--> SRNet
