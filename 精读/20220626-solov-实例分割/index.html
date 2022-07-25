@@ -848,7 +848,7 @@ todo</p>
 <p>确认了类别，和mask，就获得了最后的实例分割结果</p>
 </blockquote>
 <p><mark>如何预测实例mask？</mark></p>
-<p>直接的想法就是李永类似FCN的结构，但FCN对空间位置不敏感，采用<code>CoordConv</code>来加入位置敏感信息【直接加入归一化的像素坐标】，参考下图：</p>
+<p>直接的想法就是利用类似FCN的结构，但FCN对空间位置不敏感，采用<code>CoordConv</code>来加入位置敏感信息【直接加入归一化的像素坐标】，参考下图：</p>
 <p><img alt="20220725220459" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725220459.png" /></p>
 <blockquote>
 <p>2个head除了最后一个conv其他层都是共享参数的。</p>
@@ -862,15 +862,21 @@ todo</p>
 <p>关于 <span class="arithmatex"><span class="MathJax_Preview">S^2</span><script type="math/tex">S^2</script></span> 个channel 与 <span class="arithmatex"><span class="MathJax_Preview">S*S</span><script type="math/tex">S*S</script></span>grid对应顺序的问题，目前看影响不大，按行的顺序即可。</p>
 </blockquote>
 <h5 id="loss-function">loss function<a class="headerlink" href="#loss-function" title="Permanent link">&para;</a></h5>
-<p>损失函数定义如下：
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">L=L_{cate} + \lambda L_{mask}</span><script type="math/tex">L=L_{cate} + \lambda L_{mask}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">L=L_{cate} + \lambda L_{mask}</span><script type="math/tex">L=L_{cate} + \lambda L_{mask}</script></span></script></span>
-比较常规的加权loss，<span class="arithmatex"><span class="MathJax_Preview">L_{cate}</span><script type="math/tex">L_{cate}</script></span>一般为传统的Focal loss，<span class="arithmatex"><span class="MathJax_Preview">L_{mask}</span><script type="math/tex">L_{mask}</script></span>如下：
+<p>损失函数定义如下：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">L=L_{cate} + \lambda L_{mask}</div>
+<script type="math/tex; mode=display">L=L_{cate} + \lambda L_{mask}</script>
+</div>
+<p>比较常规的加权loss，<span class="arithmatex"><span class="MathJax_Preview">L_{cate}</span><script type="math/tex">L_{cate}</script></span>一般为传统的Focal loss，<span class="arithmatex"><span class="MathJax_Preview">L_{mask}</span><script type="math/tex">L_{mask}</script></span>如下：
 <img alt="20220725221801" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725221801.png" /></p>
 <p>其中<span class="arithmatex"><span class="MathJax_Preview">N_pos</span><script type="math/tex">N_pos</script></span>是正样本总数，k 代表第k个channel【给定S的情况下，对应的可以算出i 和 j】，<span class="arithmatex"><span class="MathJax_Preview">p^*_{i,j}</span><script type="math/tex">p^*_{i,j}</script></span>代表(i,j)处如果是一个实例就&gt;0，否则=0. <span class="arithmatex"><span class="MathJax_Preview">d_mask</span><script type="math/tex">d_mask</script></span>就是两个mask之间的距离或者损失度量了。</p>
 <p>这里实现了3个版本，1. BCE，2.Focal loss，3. Dice loss。最后选择了dice loss，效果最好且最稳定。</p>
 <h5 id="decoupleap06">decouple【AP+0.6%】<a class="headerlink" href="#decoupleap06" title="Permanent link">&para;</a></h5>
-<p>以S=20为例，会输出400个channel，大部分情况下目标比较稀疏，所以矩阵会很冗余。所以相比普通的SOLO head，这里额外改进了一个解耦的head，原先是输出<span class="arithmatex"><span class="MathJax_Preview">H*W*S^2</span><script type="math/tex">H*W*S^2</script></span>，解耦x和y之后，输出就是<span class="arithmatex"><span class="MathJax_Preview">H*W*2S</span><script type="math/tex">H*W*2S</script></span>，一个x branch 一个 y branch，所以这里的mask输出：
-<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">mask_{instance} = map_{xj} * map_{yi}</span><script type="math/tex">mask_{instance} = map_{xj} * map_{yi}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">mask_{instance} = map_{xj} * map_{yi}</span><script type="math/tex">mask_{instance} = map_{xj} * map_{yi}</script></span></script></span></p>
+<p>以S=20为例，会输出400个channel，大部分情况下目标比较稀疏，所以矩阵会很冗余。所以相比普通的SOLO head，这里额外改进了一个解耦的head，原先是输出<span class="arithmatex"><span class="MathJax_Preview">H*W*S^2</span><script type="math/tex">H*W*S^2</script></span>，解耦x和y之后，输出就是<span class="arithmatex"><span class="MathJax_Preview">H*W*2S</span><script type="math/tex">H*W*2S</script></span>，一个x branch 一个 y branch，所以这里的mask输出：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">mask_{instance} = map_{xj} * map_{yi}</div>
+<script type="math/tex; mode=display">mask_{instance} = map_{xj} * map_{yi}</script>
+</div>
 <p><span class="arithmatex"><span class="MathJax_Preview">map_{xj}</span><script type="math/tex">map_{xj}</script></span>和<span class="arithmatex"><span class="MathJax_Preview">map_{yi}</span><script type="math/tex">map_{yi}</script></span>分别是 X和Y 的 <span class="arithmatex"><span class="MathJax_Preview">j^{th}</span><script type="math/tex">j^{th}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">i^{th}</span><script type="math/tex">i^{th}</script></span> channel，元素相乘。</p>
 <p><img alt="20220725223015" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220725223015.png" /></p>
 <h3 id="5">5. 应用场景<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
