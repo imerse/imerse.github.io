@@ -9,15 +9,15 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
     
     
       
-        <title>20220612 solov2 实例分割 - 日拱一卒</title>
+        <title>Detection - 日拱一卒</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b80c2a2.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -42,7 +42,7 @@
     
       <link rel="stylesheet" href="../../extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              20220612 solov2 实例分割
+              Detection
             
           </span>
         </div>
@@ -180,7 +180,7 @@
   
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
-        浅尝辄止
+        关联图
       </a>
     </li>
   
@@ -268,14 +268,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          浅尝辄止
+          关联图
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="浅尝辄止" data-md-level="1">
+      <nav class="md-nav" aria-label="关联图" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          浅尝辄止
+          关联图
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -293,12 +293,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          20220612 solov2 实例分割
+          Detection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        20220612 solov2 实例分割
+        Detection
       </a>
       
         
@@ -316,116 +316,74 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    一、文档更新记录
+    目标检测 系列
   </a>
-  
-    <nav class="md-nav" aria-label="一、文档更新记录">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 版本信息
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    二、算法介绍
+    级联目标检测 系列
   </a>
-  
-    <nav class="md-nav" aria-label="二、算法介绍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    1. 核心思想
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 结论和展望
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 实验
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 实验">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    数据集介绍
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实验结果
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4. 详细过程
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 详细过程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    训练策略
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5. 应用场景
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    6. 附图
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    三、附件
+  <a href="#_3" class="md-nav__link">
+    分割 系列
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    transformer 系列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    人脸 系列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-td-s-add-5landmarksmulti-taskcontext-modelingdcnlight-weight-reretinaface1905-nas-scscrfd2105" class="md-nav__link">
+    graph TD
+    S("人脸检测") --"add 5landmarks(multi-task),context modeling,dcn,light weight"--&gt; RE(retinaface1905) --"nas,计算和样本搜索分配"--&gt; SC("SCRFD2105")
+
+  </a>
+  
+    <nav class="md-nav" aria-label="graph TD
+    S("人脸检测") --"add 5landmarks(multi-task),context modeling,dcn,light weight"--&gt; RE(retinaface1905) --"nas,计算和样本搜索分配"--&gt; SC("SCRFD2105")
+">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ocr" class="md-nav__link">
+    OCR 系列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    对比学习 系列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gan" class="md-nav__link">
+    GAN 系列
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -520,6 +478,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E7%B2%BE%E8%AF%BB/20220612-solov2-%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/" class="md-nav__link">
+        20220612 solov2 实例分割
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E7%B2%BE%E8%AF%BB/20220619-retinaface/" class="md-nav__link">
         20220619 retinaface
       </a>
@@ -574,116 +546,74 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    一、文档更新记录
+    目标检测 系列
   </a>
-  
-    <nav class="md-nav" aria-label="一、文档更新记录">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 版本信息
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    二、算法介绍
+    级联目标检测 系列
   </a>
-  
-    <nav class="md-nav" aria-label="二、算法介绍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    1. 核心思想
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 结论和展望
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 实验
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 实验">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    数据集介绍
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实验结果
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4. 详细过程
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 详细过程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    训练策略
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5. 应用场景
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    6. 附图
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    三、附件
+  <a href="#_3" class="md-nav__link">
+    分割 系列
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    transformer 系列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    人脸 系列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-td-s-add-5landmarksmulti-taskcontext-modelingdcnlight-weight-reretinaface1905-nas-scscrfd2105" class="md-nav__link">
+    graph TD
+    S("人脸检测") --"add 5landmarks(multi-task),context modeling,dcn,light weight"--&gt; RE(retinaface1905) --"nas,计算和样本搜索分配"--&gt; SC("SCRFD2105")
+
+  </a>
+  
+    <nav class="md-nav" aria-label="graph TD
+    S("人脸检测") --"add 5landmarks(multi-task),context modeling,dcn,light weight"--&gt; RE(retinaface1905) --"nas,计算和样本搜索分配"--&gt; SC("SCRFD2105")
+">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ocr" class="md-nav__link">
+    OCR 系列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    对比学习 系列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gan" class="md-nav__link">
+    GAN 系列
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -701,78 +631,111 @@
                 
 
 
-  <h1>20220612 solov2 实例分割</h1>
+  <h1>Detection</h1>
 
-<h2 id="_1">一、文档更新记录<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="1">1. 版本信息<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>版本号：v1</li>
-<li>论文名称：SOLOv2: Dynamic and Fast Instance Segmentation [202003CVPR]</li>
-<li>创建日期：2022.06.12</li>
-<li>创建人：扶云</li>
-</ul>
-<h2 id="_2">二、算法介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="1_1">1. 核心思想<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<ol>
-<li>新框架由<code>一个高效且整体的实例掩码进行表示</code>，该方案动态分割图像中的每个实例，而无需借助边界框检测。如何做？：将对象mask生成解耦为mask kernel预测和mask特征学习，它们分别负责生成卷积核和要与之卷积的特征映射;</li>
-<li>使用<code>矩阵非极大值抑制 (NMS) 技术</code>显著降低了推理开销。我们的矩阵 NMS 一次性执行具有并行矩阵运算的 NMS，并产生更好的结果。我们证明我们的 SOLOv2 在速度和准确性方面都优于大多数最先进的实例分割方法。轻量级版本在 COCO test-dev 上以 31.3 FPS 的速度执行并产生 37.1% 的 AP。</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>看起来就是采用了一个直接预测mask的方案，而不需要通过先预测边框再去做分割，第2个特点就是做了一个矩阵nms加速。
-特点：无proposal、无anchor、类似FCN，速度快</p>
-</div>
-<p>直接看下效果和对比：</p>
-<p><img alt="20220613174615" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220613174615.png" /></p>
-<h3 id="2">2. 结论和展望<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>从三个方面介绍了一种动态、快速、性能强的实例分割解决方案。</p>
-<ul>
-<li>我们提出了学习自适应、动态卷积核来进行mask预测，并以位置为条件，导致更紧凑但更强大的头部设计，并获得更好的结果。</li>
-<li>我们以一种简单统一的方式重新设计了对象mask生成，从而预测了更准确的边界。</li>
-<li>此外，与目标检测中的box NMS不同，对于直接实例分割，推理效率的一个瓶颈是mask的NMS。我们设计了一种简单且速度快得多的NMS策略，称为矩阵NMS，用于在不牺牲maskAP的情况下进行NMS处理。</li>
-</ul>
-<p>我们在MS Coco和LVIS数据集上的实验表明，SOLOv2在准确率和速度方面都具有优越的性能。</p>
-<h3 id="3">3. 实验<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<h4 id="_3">数据集介绍<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<ol>
-<li><ins class="critic">coco 2017</ins></li>
-<li><ins class="critic">LVIS dataset</ins>
-    LVIS[33]是最近提出的一个用于长尾物体分割的数据集，它有1000多个物体类别。在LVIS中，每个物体实例都是用高质量的掩码来分割的，其质量超过了相关COCO数据集的注释质量。由于LVIS是新的，只有Mask R-CNN的结果是公开的。因此，只将SOLOv2与Mask R-CN基线进行比较。</li>
-<li><ins class="critic">COCO2018 的全景分割</ins></li>
-</ol>
-<h4 id="_4">实验结果<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<ol>
-<li>SOLOv2比SOLO高出1.9%的AP，同时速度快33%</li>
-<li>通过直接将预测的掩码转换为其bbox，产生44.9%的物体检测AP，这甚至超过了许多最先进的、高度工程化的物体检测方法</li>
-</ol>
-<p>3个基线任务进行实验：在MS Coco[32]上对实例分割、目标检测和全景分割+在最近提出的LVIS数据集[33]上的实验结果</p>
-<figure>
-  <img src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220613210029.png"  />
-  <figcaption>在LVIS dataset上的结果(少、中、多样本，小中大样本集)</figcaption>
-</figure>
+<h4 id="_1">目标检测 系列<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    FR(Faster rcnn) --"cascade回归,逐stage提高proposal的IoU值"--&gt; cascadeRCNN(cascadeRCNN)
 
-<ol>
-<li>实例分割</li>
-</ol>
-<p><code>训练方法</code>
-SOLOv2采用随机梯度下降(SGD)算法进行训练。我们在8个GPU上使用同步SGD，每个小批次总共有16个图像。所有模型都以0.01的初始学习率训练36个epoch(即3x)，然后在第27个epoch除以10，在第33个epoch再次学习。我们使用scale jitter，其中较短的图像边被随机采样，范围是从640到800px。</p>
-<p>结论：
-- +5.0 APL than Mask R-CNN
-- 局部区域的mask比 Mask R-CNN要精细很多</p>
-<p><code>消融实验</code></p>
+    subgraph 单阶段
+    SSD
+    YOLOv1("YOLOv1, M*N，无anchor") --"anchor(kmeans, wh), iou匹配"--&gt; YOLOv2 --"多尺度预测"--&gt; YOLOv3 -- "加权残差WRC,CSP, CmBN, SAT,Mish,Mosaic,CIou" --&gt; YOLOv4(YOLOv4) --"改进匹配规则,backbone, fpn+pan"--&gt; YOLOv5
+    YOLOv4 --&gt; s("scaled YOLOv4")
+    YOLOv5 --"根据当前帧预测下一帧中目标位置"--&gt;StreamYolo
+    YOLOv5 --"无anchor,"--&gt; YOLOX?
+    end
+
+    FPN --&gt; YOLOv5
+
+    subgraph anchor free
+    anchorfree --"bottom-up,关键点-匹配,embedding vector"--&gt; CornerNet --"热图预测中心点,add wh/offset分支"--&gt; CenterNet -- "FPN,centerness过滤低质量样本,add 正样本召回" --&gt; FCOS巅峰
+    end</code></pre>
+<h4 id="_2">级联目标检测 系列<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    %% this is a comment A -- text --&gt; B{node}
+    cascadeRCNN(cascadeRCNN,cascade回归,逐stage提高proposal的IoU值)</code></pre>
+<h4 id="_3">分割 系列<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ul>
-<li>kernel shape: 考虑输入通道数和kernel size。输入通道数从128-&gt;256 可以获得0.4% AP提升；【选择256】</li>
-<li>坐标的有效性：本方法是通过位置信息分割目标，所有位置信息非常重要；</li>
+<li>实例分割：</li>
 </ul>
-<h3 id="4">4. 详细过程<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<p>我们首先介绍了一个动态方案，该方案能够按位置动态地分割物体。
-具体来说，遮罩学习过程可以分为两部分：卷积核学习和特征学习（图2（b））。在将像素划分为不同的位置类别时，掩膜核由网络动态预测，并以输入为条件。我们进一步构建了一个统一的、高分辨率的面具特征表示，用于实例感知的分割。因此，我们能够毫不费力地预测高分辨率的物体掩模，以及单独和有效地学习掩模核和掩模特征。
-我们进一步提出了一种高效的矩阵NMS算法。作为抑制重复预测的后处理步骤，非最大抑制（NMS）是最先进的物体检测系统的一个组成部分。以广泛采用的多类NMS为例。对于每个类别，预测按置信度降序排列。然后，对于每个预测，它删除所有其他高度重叠的预测。顺序和递归操作导致了不可忽略的延迟。对于掩码NMS，这一缺点被进一步放大。与边界箱相比，计算每个掩码对的IoU需要更多的时间，从而导致了大量的开销。
-我们通过引入Matrix NMS来解决这个问题，Matrix NMS一次就能完成并行矩阵操作的NMS。我们的Matrix NMS在精度和速度上都优于现有的NMS及其品种。结果，Matrix NMS在简单的python实现中，在不到1毫秒的时间内处理了500个掩码，比最近提出的Fast NMS[2]高出0.4% AP</p>
-<h4 id="_5">训练策略<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<h3 id="5">5. 应用场景<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
-<h3 id="6">6. 附图<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
-<h2 id="_6">三、附件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    IS("实例分割") --&gt; FC(FCN) --"location+grid+two branch"--&gt; SOLO --"dynamic conv+matrix nms"--&gt; SOLOV2
+    IS --&gt; MASKRCNN("mask rcnn")
+</code></pre>
+<pre class="mermaid"><code>graph TD
+    %% segmentation
+</code></pre>
+<h4 id="transformer">transformer 系列<a class="headerlink" href="#transformer" title="Permanent link">&para;</a></h4>
+<ul>
+<li>DETR[202005]：端到端的目标检测，no anchor/nms，提出了一个新的基于集合的目标函数；限制输出100个框，直接限制阈值；【主要还是 transformer 的全局特征提的很好】</li>
+<li>小目标效果不好</li>
+<li>500epoch</li>
+<li>采用object query来替代了anchor机制</li>
+<li>利用二分图匹配来替代nms</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+    TR(Transformer) --"输入一对图片，遥感影像"--&gt; ChangeFormer
+    TR --"细粒度分类,PSM,contrastive loss"--&gt; TransFG
+    TR --"应用于Vision"--&gt; VI(VIT)--"滑窗,窗口内SA,多尺度,SWA,Att Mask"--&gt; ST("swin Transformer")
+
+    TR --"-nms,全局建模,no proposal"--&gt; DE(DETR) 
+    --"deformable"--&gt; DDE("deformable DETR")
+</code></pre>
+<h4 id="_4">人脸 系列<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h2 id="graph-td-s-add-5landmarksmulti-taskcontext-modelingdcnlight-weight-reretinaface1905-nas-scscrfd2105"><pre class="mermaid"><code>graph TD
+    S("人脸检测") --"add 5landmarks(multi-task),context modeling,dcn,light weight"--&gt; RE(retinaface1905) --"nas,计算和样本搜索分配"--&gt; SC("SCRFD2105")
+</code></pre><a class="headerlink" href="#graph-td-s-add-5landmarksmulti-taskcontext-modelingdcnlight-weight-reretinaface1905-nas-scscrfd2105" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    S("人脸属性") --&gt; FA(FairFace) 
+</code></pre>
+<h4 id="ocr">OCR 系列<a class="headerlink" href="#ocr" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    SJC("OCR-检测") --"可微分thresholdmap"--&gt; DB(DBnet) 
+    SSB("OCR-识别") --"CNN+RNN+CTC loss"--&gt; CR(CRNN) 
+
+    DB--&gt;CR --"2D attention,enc-dec"--&gt; SAR2018(SAR)
+
+    SJC--&gt; EA(EAST)
+    EA --先检测--&gt; BJ(文本编辑) --"文本骨架,文字移除,合成"--&gt; SRNet</code></pre>
+<h4 id="_5">对比学习 系列<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>无监督学习，训练越久模型越大一般效果也确实越好。</li>
+<li>负样本一定要多</li>
+</ul>
+<p>趋势：</p>
+<ul>
+<li>目标函数：infoNCE或者相关变体</li>
+<li>模型：一个encoder + mlp prjection head</li>
+<li>数据增强：更强大的aug</li>
+<li>动量编码器</li>
+<li>训练时间更长, 更大的batch size</li>
+</ul>
+<p><code>multi-crop:</code> 改变只有1+1两个正样本对的情况，多加一些小尺寸Crop，在保证计算量不大幅增加的同时，增加全局和局部的view，有效提点。</p>
+<pre class="mermaid"><code>graph TD
+    S("对比学习cv双雄") --"字典查询,1队列2动量编码器"--&gt; MO(MOCO) -- "+mlp,aug,cos,+epochs"--&gt; MOCOV2  -- "freeze tokenization"--&gt; MOCOV3 
+    S --"resnet50"--&gt; SimCLR --"resnet152,SK(selective kernel),+1层mlp,+动量编码器"--&gt; SimCLRV2
+
+    S --"swap prediction,3000聚类中心,multi-crop"--&gt; SW(SwAV)
+
+
+    S1("对比学习-无负样本") --"无负样本,用正样本1的特征预测正样本2"--&gt; BY(BYOL) --"-BN,gn+ws"--&gt; BY2(BYOL2)
+    S1 --"-batchsize,-动量,-负样本;EM"--&gt; Sim("SimSiam") 
+
+    Sim ----&gt; MOCOV3
+    SimCLR --&gt; BY
+</code></pre>
+<p>一张图总结所有。</p>
+<p><img alt="20220612161231" src="https://lcv1-1256975222.cos.ap-shanghai.myqcloud.com/20220612161231.png" /></p>
+<h4 id="gan">GAN 系列<a class="headerlink" href="#gan" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph TD
+    S("GAN系列") --"G+D"--&gt; GAN --"加入condition控制类别" --&gt; CG(CGAN)
+    --"+CNN(BN+Relu..)"--&gt;DC(DCGAN)
+    CG --&gt; pixpix --循环一致loss--&gt; CycleGAN
+
+    GAN --"Wasserstein距离解决梯度消失问题"--&gt; W-GAN</code></pre>
+
+
+
 
               
             </article>
@@ -842,10 +805,11 @@ SOLOv2采用随机梯度下降(SGD)算法进行训练。我们在8个GPU上使�
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2ab50757.min.js"></script>
       
         <script src="../../mathjax-config.js"></script>
       
